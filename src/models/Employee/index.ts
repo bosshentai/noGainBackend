@@ -21,7 +21,7 @@ export class Employee {
           role: Roles.EMPLOYEE,
           cni: data.cni,
           nif: data.nif,
-          birth: data.birth,
+          birth: new Date(data.birth),
           employee: {
             create: {},
           },
@@ -29,7 +29,9 @@ export class Employee {
       });
 
       return newEmployee;
-    } catch (error) {}
+    } catch (error) {
+      throw new Error("problem with db");
+    }
   }
 
   static async getAll() {

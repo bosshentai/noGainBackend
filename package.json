@@ -6,7 +6,8 @@
   "author": "Bosshentai <baptistamhernani@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start:dev": "ts-node-dev --respawn --transpile-only --exit-child --watch src app.ts"
+    "start:dev": "ts-node-dev --respawn --transpile-only --exit-child --watch src app.ts",
+    "prisma:db:seed": "npx prisma db seed"
   },
   "dependencies": {
     "@prisma/client": "^4.15.0",

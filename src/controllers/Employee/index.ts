@@ -8,6 +8,8 @@ export const createEmployeeController = async (
   try {
     const data = request.body;
 
+    
+
     const result = await Employee.create(data);
 
     return response.status(201).json(result);
